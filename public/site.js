@@ -28,7 +28,7 @@ fetch('https://s.cmania.co/api/fauna/huggy')
     } else {
       !(function (b, t, c) {
         ((c = t.createElement(b)).async = 1),
-          (c.src = 'http://s.cmania.co/tools/whatsapp.js'),
+          (c.src = 'https://s.cmania.co/tools/whatsapp.js'),
           (b = t.getElementsByTagName(b)[0]).parentNode.insertBefore(c, b);
       })('script', document);
     }
