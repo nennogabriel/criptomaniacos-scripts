@@ -1,4 +1,7 @@
 var hour = new Date().getUTCHours();
+fetch('https://s.cmania.co/api/fauna/huggy')
+  .then((r) => console.log(JSON.stringify(r)))
+  .catch((e) => console.log(e));
 var $_Huggy = {
   defaultCountry: '+55',
   uuid: 'b7bc2fce-928a-407b-b55e-228a1a3df0dd',
