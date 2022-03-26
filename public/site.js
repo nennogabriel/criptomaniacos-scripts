@@ -5,7 +5,7 @@ var $_Huggy = {
   channelGreeting: 'Olá! Gostaria de conversar com o time de atendimento.',
 };
 
-fetch('https://s.cmania.co/api/fauna/huggy')
+fetch('https://s.cmania.co/api/status/huggy')
   .then((r) => r.json())
   .then((j) => {
     const { huggy } = j;

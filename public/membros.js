@@ -4,7 +4,7 @@ var $_Huggy = {
   company: '335060',
 };
 
-fetch('https://s.cmania.co/api/fauna/huggy')
+fetch('https://s.cmania.co/api/status/huggy')
   .then((r) => r.json())
   .then((j) => {
     const { huggy } = j;

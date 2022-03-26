@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "/api/status/(.*)",
       "headers": [
         {
           "key": "access-control-allow-origin",
