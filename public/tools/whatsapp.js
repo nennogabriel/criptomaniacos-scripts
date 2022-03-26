@@ -5,7 +5,7 @@ var $_CM = {
 
 !(function (d) {
   const e = d.createElement('img');
-  (e.src = '/assets/whatsapp-logo.svg'),
+  (e.src = 'https://s.cmania.co/assets/whatsapp-logo.svg'),
     (e.style.width = '80px'),
     (e.style.height = '80px');
   const t = d.createElement('a');
