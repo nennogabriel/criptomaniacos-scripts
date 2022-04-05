@@ -1,7 +1,7 @@
-POST https://carteira.criptomaniacos.app/api/fauna/huggy
+POST https://s.cmania.co/api/status/huggy
 Content-Type: application/json
 
 {
   "token": "",
-  "huggy": true
+  "huggy": false
 }

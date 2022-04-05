@@ -13,9 +13,9 @@ var $_Huggy = {
       h.uuid = 'eb23b2fe-ab27-4358-b165-66f50a7cdaf3';
       break;
     default:
-      (h.uuid = 'b7bc2fce-928a-407b-b55e-228a1a3df0dd'),
-        (h.channelGreeting =
-          'Olá! Gostaria de conversar com o time de atendimento.');
+      h.uuid = 'b7bc2fce-928a-407b-b55e-228a1a3df0dd';
+      h.channelGreeting =
+        'Olá! Gostaria de conversar com o time de atendimento.';
   }
 })(document.location.hostname, $_Huggy);
 
