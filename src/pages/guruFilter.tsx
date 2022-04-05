@@ -29,7 +29,7 @@ const GuruFilter: NextPage = () => {
       </Head>
 
       <h1>Obrigado pelo seu cadastro</h1>
-      <p>Você será redirecionado para a plataforma em 5 segundos.</p>
+      <p>Você será redirecionado para a plataforma em 2 segundos.</p>
       <p>
         Caso não seja redirecionado, clique <a href={completeUrl}>aqui</a>.
       </p>
@@ -38,6 +38,3 @@ const GuruFilter: NextPage = () => {
 };
 
 export default GuruFilter;
-
-
-https://s.cmania.co/guruFilter?email=[field id="email"]&name=[field id="fname"]&nome=[field id="fname"]
