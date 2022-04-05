@@ -47,3 +47,17 @@ fetch('https://s.cmania.co/api/status/huggy')
       })('script', document);
     }
   });
+
+window.onload = function () {
+  var anchors = document.getElementsByTagName('a');
+  if (document.location.hostname == 'plataforma.criptomaniacos.com.br') {
+    for (var i = 0; i < anchors.length; i++) {
+      if (
+        anchors[i].href.startsWith('https://plataforma.criptomaniacos.com.br/')
+      ) {
+        break;
+      }
+      anchors[i].setAttribute('target', '_blank');
+    }
+  }
+};
