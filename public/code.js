@@ -44,6 +44,10 @@ var $_Ackee = {
       (c.src = 'https://ackee.cmania.co/tracker.js'),
       c.setAttribute('data-ackee-server', $_Ackee.server),
       c.setAttribute('data-ackee-domain-id', $_Ackee.domainID),
+      c.setAttribute(
+        'data-ackee-opts',
+        '{ "ignoreLocalhost": true, "detailed": true }'
+      ),
       (b = t.getElementsByTagName(b)[0]).parentNode.insertBefore(c, b);
   }
 })('script', document);
