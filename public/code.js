@@ -41,9 +41,9 @@ var $_Ackee = {
 !(function (b, t, c) {
   if ($_Ackee.domainID) {
     ((c = t.createElement(b)).async = 1),
-      (c.src = 'https://ackee.cmania.co/tracker.js')
-        .setAttribute('data-ackee-server', $_Ackee.server)
-        .setAttribute('data-ackee-domain-id', $_Ackee.domainID),
+      (c.src = 'https://ackee.cmania.co/tracker.js'),
+      c.setAttribute('data-ackee-server', $_Ackee.server),
+      c.setAttribute('data-ackee-domain-id', $_Ackee.domainID),
       (b = t.getElementsByTagName(b)[0]).parentNode.insertBefore(c, b);
   }
 })('script', document);
