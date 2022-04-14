@@ -7,11 +7,15 @@ var $_Ackee = {
 };
 
 ((d, h, a) => {
-  function v(d, h, a) {
-    return d.endsWith(h);
+  function v(n, a) {
+    return n.endsWith(a);
   }
   // huggy uuid
   switch (!0) {
+    case v(d, 'criptomaniacos.com.br'):
+    case v(d, 'www.criptomaniacos.com.br'):
+      h.uuid = '';
+      break;
     case v(d, 'plataforma.criptomaniacos.com.br'):
     case v(d, 'criptomaniacos.app'):
       h.uuid = 'eb23b2fe-ab27-4358-b165-66f50a7cdaf3';
@@ -26,6 +30,10 @@ var $_Ackee = {
     case v(d, 'www.criptomaniacos.io'):
     case v(d, 'criptomaniacos.io'):
       a.domainID = 'eb978a5b-49d6-49ab-8855-53195f83dd4b';
+      break;
+    case v(d, 'www.criptomaniacos.com.br'):
+    case v(d, 'criptomaniacos.com.br'):
+      a.domainID = 'a1e445ab-0037-4e2e-8b2c-15a550ee4ea4';
       break;
     case v(d, 'plataforma.criptomaniacos.com.br'):
       a.domainID = '6d00427a-67dc-48a0-abd1-d0239b3300a0';
@@ -53,34 +61,37 @@ var $_Ackee = {
   }
 })('script', document);
 
-fetch('https://s.cmania.co/api/status/huggy')
-  .then((r) => r.json())
-  .then((j) => {
-    const { huggy } = j;
-    if (huggy) {
-      (function (i, s, o, g, r, a, m) {
-        i[r] = { context: { id: '6f572ea0161fbcb0a44168df7c23ea65' } };
-        a = o;
-        o = s.createElement(o);
-        o.async = 1;
-        o.src = g;
-        m = s.getElementsByTagName(a)[0];
-        m.parentNode.insertBefore(o, m);
-      })(
-        window,
-        document,
-        'script',
-        'https://js.huggy.chat/widget.min.js',
-        'pwz'
-      );
-    } else {
-      !(function (b, t, c) {
-        ((c = t.createElement(b)).async = 1),
-          (c.src = 'https://s.cmania.co/tools/whatsapp.js'),
-          (b = t.getElementsByTagName(b)[0]).parentNode.insertBefore(c, b);
-      })('script', document);
-    }
-  });
+// Huggy - Customer Experience Chat
+if ($_Huggy.uuid) {
+  fetch('https://s.cmania.co/api/status/huggy')
+    .then((r) => r.json())
+    .then((j) => {
+      const { huggy } = j;
+      if (huggy) {
+        (function (i, s, o, g, r, a, m) {
+          i[r] = { context: { id: '6f572ea0161fbcb0a44168df7c23ea65' } };
+          a = o;
+          o = s.createElement(o);
+          o.async = 1;
+          o.src = g;
+          m = s.getElementsByTagName(a)[0];
+          m.parentNode.insertBefore(o, m);
+        })(
+          window,
+          document,
+          'script',
+          'https://js.huggy.chat/widget.min.js',
+          'pwz'
+        );
+      } else {
+        !(function (b, t, c) {
+          ((c = t.createElement(b)).async = 1),
+            (c.src = 'https://s.cmania.co/tools/whatsapp.js'),
+            (b = t.getElementsByTagName(b)[0]).parentNode.insertBefore(c, b);
+        })('script', document);
+      }
+    });
+}
 
 window.onload = function () {
   var anchors = document.getElementsByTagName('a');
