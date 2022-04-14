@@ -23,6 +23,7 @@ var $_Ackee = {
   }
   // ackee domainID
   switch (!0) {
+    case v(d, 'www.criptomaniacos.io'):
     case v(d, 'criptomaniacos.io'):
       a.domainID = 'eb978a5b-49d6-49ab-8855-53195f83dd4b';
       break;
