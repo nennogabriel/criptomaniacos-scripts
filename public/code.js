@@ -27,19 +27,19 @@ var $_Ackee = {
   }
   // ackee domainID
   switch (!0) {
-    case v(d, 'www.criptomaniacos.io'):
-    case v(d, 'criptomaniacos.io'):
-      a.domainID = 'eb978a5b-49d6-49ab-8855-53195f83dd4b';
-      break;
-    case v(d, 'www.criptomaniacos.com.br'):
-    case v(d, 'criptomaniacos.com.br'):
-      a.domainID = 'a1e445ab-0037-4e2e-8b2c-15a550ee4ea4';
-      break;
     case v(d, 'plataforma.criptomaniacos.com.br'):
       a.domainID = '6d00427a-67dc-48a0-abd1-d0239b3300a0';
       break;
     case v(d, 'carteira.criptomaniacos.app'):
       a.domainID = '1d732e10-665a-4039-8d22-17e576be358f';
+      break;
+    case v(d, 'www.criptomaniacos.com.br'):
+    case v(d, 'criptomaniacos.com.br'):
+      a.domainID = 'a1e445ab-0037-4e2e-8b2c-15a550ee4ea4';
+      break;
+    case v(d, 'www.criptomaniacos.io'):
+    case v(d, 'criptomaniacos.io'):
+      a.domainID = 'eb978a5b-49d6-49ab-8855-53195f83dd4b';
       break;
     default:
       a.domainID = '';
