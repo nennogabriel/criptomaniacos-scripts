@@ -10,6 +10,7 @@ var $_Ackee = {
   function v(n, a) {
     return n.endsWith(a);
   }
+
   // huggy uuid
   switch (!0) {
     case v(d, 'plataforma.criptomaniacos.com.br'):
@@ -25,6 +26,7 @@ var $_Ackee = {
       h.channelGreeting =
         'Olá! Gostaria de conversar com o time de atendimento.';
   }
+
   // ackee domainID
   switch (!0) {
     case v(d, 'plataforma.criptomaniacos.com.br'):
@@ -93,6 +95,7 @@ if ($_Huggy.uuid) {
     });
 }
 
+// Make all links open in a new tab
 window.onload = function () {
   var anchors = document.getElementsByTagName('a');
   if (document.location.hostname == 'plataforma.criptomaniacos.com.br') {
