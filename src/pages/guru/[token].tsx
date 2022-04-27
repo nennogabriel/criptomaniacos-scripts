@@ -7,7 +7,7 @@ const GuruFilter: NextPage = ({ token }: any) => {
   const { query } = router;
 
   const urlData = Object.keys(query).map((key) => {
-    const k = key.replaceAll('amp;', '');
+    const k = key.replace('amp;', '');
     return `${k}=${query[key]}`;
   });
 
