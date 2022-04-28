@@ -1,1 +1,9 @@
-http://localhost:3000/api/cademi/something?blue=azul
+
+POST http://localhost:3000/api/cademi/post-gambi?eu=voce&amp;voce=eu
+Content-Type: application/json
+
+{
+  "id": "voce",
+  "imagem": "voce",
+  "status": "voce"
+}

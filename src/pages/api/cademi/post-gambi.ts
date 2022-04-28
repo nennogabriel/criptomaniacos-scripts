@@ -1,19 +1,29 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
+function sendPostback(data: any) {
+  return fetch(
+    `https://criptomaniacos.cademi.com.br/api/postback/custom?token=${process.env.CADEMI_TOKEN}`,
+    { method: 'POST', body: JSON.stringify(data) }
+  );
+}
+
 async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  if (req.method === 'POST') {
     // cleanup query erros from elementor
 
-    const query = Object.keys(req.query).reduce((acc, key) => {
+    const queries = Object.keys(req.query).reduce((acc, key) => {
       const k = key.replace('amp;', '');
       return { ...acc, [k]: req.query[key] };
     }, {});
 
-    // send a POST request to cademi
-    fetch(
-      `https://criptomaniacos.cademi.com.br/api/postback/custom?token=${process.env.CADEMI_TOKEN}`,
-      { method: 'POST', body: JSON.stringify(query) }
+    const query = Object.assign(
+      {
+        cliente_email: req.body.email,
+      },
+      queries
     );
+
+    setTimeout(() => sendPostback(query), 15000);
 
     return res.status(200).json({
       status: 'ok',
