@@ -7,13 +7,15 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { name, email } = req.body;
     console.log('name', name);
     console.log('email', email);
-    fetch(`https://links.criptomaniacos.com.br/form/${id}`, {
-      method: 'POST',
-      body: JSON.stringify({ name, email }),
-    });
-    return res.status(200).json({
-      status: 'ok',
-    });
+    if (!!name && !!email) {
+      fetch(`https://links.criptomaniacos.com.br/form/${id}`, {
+        method: 'POST',
+        body: JSON.stringify({ name, email }),
+      });
+      return res.status(200).json({
+        status: 'ok',
+      });
+    }
   }
   console.log('body', req.body);
 
