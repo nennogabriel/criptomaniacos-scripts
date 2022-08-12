@@ -4,7 +4,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
 
   if (req.method === 'POST' && !!id) {
-    const { name, email } = req.body;
+    const name = req.body['fields[fname][value]'];
+    const email = req.body['fields[email][value]'];
     console.log('name', name);
     console.log('email', email);
     if (!!name && !!email) {
