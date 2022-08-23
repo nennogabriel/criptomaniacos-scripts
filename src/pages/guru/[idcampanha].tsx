@@ -1,8 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 const GuruFilter: NextPage = ({ idcampanha }: any) => {
+  const [count, setCount] = useState(5);
   const router = useRouter();
   const { query } = router;
 
@@ -10,6 +12,14 @@ const GuruFilter: NextPage = ({ idcampanha }: any) => {
     const k = key.replace('amp;', '');
     return `${k}=${query[key]}`;
   });
+
+  useEffect(() => {
+    if (count >= 0) {
+      setTimeout(() => {
+        setCount(count - 1);
+      }, 1000);
+    }
+  }, [count]);
 
   if (urlData.length === 0) {
     return <div>Loading...</div>;
@@ -29,11 +39,14 @@ const GuruFilter: NextPage = ({ idcampanha }: any) => {
       </Head>
 
       <h1>Obrigado pelo seu cadastro</h1>
-      <p>Você deverá ser redirecionado para a plataforma em até 2 segundos.</p>
-      <p>
-        Caso não seja redirecionado, por favor
-        <a href={completeUrl}> clique aqui</a>.
-      </p>
+      {count > 0 ? (
+        <p>Você será redirecionado em até {count} segundos.</p>
+      ) : (
+        <p>
+          algo deu errado, mas pode acessar o link manuamente
+          <a href={completeUrl}> clicando aqui</a>.
+        </p>
+      )}
     </div>
   );
 };
