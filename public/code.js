@@ -13,6 +13,10 @@ var $_Ackee = {
 
   // huggy uuid
   switch (!0) {
+    case v(d, 'plataforma.criptomasterclass.com'):
+    case v(d, 'criptomasterclass.com'):
+      h.uuid = '49e5258f-239c-4598-88f3-62fe651eb330';
+      break;
     case v(d, 'plataforma.criptomaniacos.com.br'):
     case v(d, 'criptomaniacos.app'):
       h.uuid = 'eb23b2fe-ab27-4358-b165-66f50a7cdaf3';
