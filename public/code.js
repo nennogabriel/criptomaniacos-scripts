@@ -21,8 +21,7 @@ var $_Ackee = {
     case v(d, 'criptomaniacos.app'):
       h.uuid = 'eb23b2fe-ab27-4358-b165-66f50a7cdaf3';
       break;
-    case v(d, 'criptomaniacos.com.br'):
-    case v(d, 'www.criptomaniacos.com.br'):
+    case v(d, 'lp.criptomaniacos.io'):
       h.uuid = '';
       break;
     default:
