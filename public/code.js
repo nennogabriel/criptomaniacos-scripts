@@ -26,26 +26,6 @@ var $_Huggy = {
       h.uuid = "b7bc2fce-928a-407b-b55e-228a1a3df0dd";
       h.channelGreeting = "Olá! Gostaria de conversar com o time de atendimento.";
   }
-
-  // ackee domainID
-  switch (!0) {
-    case v(d, "plataforma.criptomaniacos.com.br"):
-      a.domainID = "8f291497-aa1d-4a9e-b769-61b0abf0e7c3";
-      break;
-    case v(d, "carteira.criptomaniacos.app"):
-      a.domainID = "3e9908ca-fb16-43c8-ad46-b548d2dcf559";
-      break;
-    case v(d, "www.criptomaniacos.com.br"):
-    case v(d, "criptomaniacos.com.br"):
-      a.domainID = "332729bd-94de-4a32-af8c-585290d8b1e6";
-      break;
-    case v(d, "www.criptomaniacos.io"):
-    case v(d, "criptomaniacos.io"):
-      a.domainID = "8da94649-a7cb-4391-a843-fde6c8e77e8c";
-      break;
-    default:
-      a.domainID = "";
-  }
 })(document.location.hostname, $_Huggy);
 
 // Huggy - Customer Experience Chat
