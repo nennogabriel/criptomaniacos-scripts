@@ -19,9 +19,9 @@ var $_Huggy = {
     case v(d, "criptomaniacos.app"):
       h.uuid = "eb23b2fe-ab27-4358-b165-66f50a7cdaf3";
       break;
-    case v(d, "lp.criptomaniacos.io"):
-      h.uuid = "";
-      break;
+    // case v(d, "lp.criptomaniacos.io"):
+    //   h.uuid = "";
+    //   break;
     default:
       h.uuid = "b7bc2fce-928a-407b-b55e-228a1a3df0dd";
       h.channelGreeting = "Olá! Gostaria de conversar com o time de atendimento.";
