@@ -2,9 +2,9 @@ var $_Huggy = {
   defaultCountry: "+55",
   company: "335060",
 };
-var $_Ackee = {
-  server: "https://ackee.cmania.co",
-};
+// var $_Ackee = {
+//   server: "https://ackee.cmania.co",
+// };
 
 ((d, h, a) => {
   function v(n, a) {
@@ -52,16 +52,16 @@ var $_Ackee = {
 })(document.location.hostname, $_Huggy, $_Ackee);
 
 // Ackee - https://ackee.cmania.co
-!(function (b, t, c) {
-  if ($_Ackee.domainID) {
-    ((c = t.createElement(b)).async = 1),
-      (c.src = "https://ackee.cmania.co/tracker.js"),
-      c.setAttribute("data-ackee-server", $_Ackee.server),
-      c.setAttribute("data-ackee-domain-id", $_Ackee.domainID),
-      c.setAttribute("data-ackee-opts", '{ "ignoreLocalhost": true, "detailed": true }'),
-      (b = t.getElementsByTagName(b)[0]).parentNode.insertBefore(c, b);
-  }
-})("script", document);
+// // !(function (b, t, c) {
+//   if ($_Ackee.domainID) {
+//     ((c = t.createElement(b)).async = 1),
+//       (c.src = "https://ackee.cmania.co/tracker.js"),
+//       c.setAttribute("data-ackee-server", $_Ackee.server),
+//       c.setAttribute("data-ackee-domain-id", $_Ackee.domainID),
+//       c.setAttribute("data-ackee-opts", '{ "ignoreLocalhost": true, "detailed": true }'),
+//       (b = t.getElementsByTagName(b)[0]).parentNode.insertBefore(c, b);
+//   }
+// })("script", document);
 
 // Huggy - Customer Experience Chat
 if ($_Huggy.uuid) {
